@@ -1,0 +1,168 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: auto;
+}
+
+.time-note {
+  color: #888; /* Light gray for faded effect */
+  font-size: 0.9em; /* Smaller font size */
+}
+
+#hotel-name::placeholder,
+#whatsapp::placeholder,
+#email::placeholder,
+#full-name::placeholder
+#remark::placeholder {
+  color: #888; /* Light gray for faded effect */
+  font-size: 8px; /* Smaller font size */
+}
+
+.note {
+  color: #888; /* Light gray for faded effect */
+  font-size: 0.9em; /* Smaller font size */
+  display: block;
+  margin-top: 5px;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300%;
+  max-width: 600px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+textarea {
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  width: 30%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+#adult-quantity,
+#children-quantity,
+#infant-quantity {
+  width: 10%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Success Page Styling */
+body.success {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+body.success #contact-form,
+body.success .form-container {
+  display: none !important;
+}
+
+#success-page {
+  max-width: 600px;
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600%;
+}
+
+#booking-summary {
+  width: 92%;
+  margin-top: 15px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+/* Faded font style for the note after total amount */
+.note {
+  color: #888; /* Light gray for faded effect */
+  font-size: 0.9em; /* Smaller font size */
+  margin-top: 5px;
+}
+
+/* Red font style for important notes */
+#booking-summary p {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+#booking-summary p.red-note {
+  color: red;
+  font-weight: bold;
+}
+
+/* Optional: Customize the red note on the summary page */
+#booking-summary p {
+  margin-top: 10px;
+}
+#hotel-name-container {
+  display: none; /* Hidden by default */
+}

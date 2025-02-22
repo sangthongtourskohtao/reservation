@@ -1,0 +1,110 @@
+<div class="form-container">
+  <form id="contact-form">
+    <!-- Container for Logo and Image -->
+    <div class="logo-tour-container">
+      <!-- Logo Section -->
+      <div class="logo">
+        <img src="https://kohtaosangthongtours.wordpress.com/wp-content/uploads/2024/11/cropped-sangthong-blue-logo-1.png" alt="Logo" width="400">
+      </div>
+    </div>
+    <h2>Reservation</h2>
+
+
+  
+    <!-- Package Selection -->
+    <label>
+      <input type="radio" name="package" value="Full Day Snorkeling Tour" data-adult="550" data-child="320" checked>
+      Full Day Snorkeling Tour <span class="time-note">(09:00AM to 17:00PM)</span>
+    </label>
+    <label>
+      <input type="radio" name="package" value="Late Riser Snorkeling Tour" data-adult="650" data-child="375">
+      Late Riser Snorkeling Tour <span class="time-note">(11:00AM to 18:00PM)</span>
+    </label>
+
+<hr style="border: 0.5px solid #ccc; margin: 15px 0;">
+    <!-- Radio Button to Toggle Hotel/Villa Input -->
+    
+     <label>
+      <input type="radio" name="hotel-toggle" value="no-hotel" onclick="toggleHotelInput(false)" checked>
+      Meeting at Sangthong Tours office 09:30AM
+    </label>
+<!-- Hidden Input to Store Pickup Option -->
+<input type="hidden" id="pickup-option" name="pickup_option" value="Meeting at Sangthong Tours office 09:30AM">
+
+<!-- Radio Button for Pickup Option -->
+<label style="font-weight: bold;">
+  <input type="radio" name="hotel-toggle" value="hotel" onclick="toggleHotelInput(true)">
+  I need Hotel/Villa pickup
+</label>
+
+<!-- Hotel Name Container -->
+<div id="hotel-name-container" style="display: none;">
+  <input type="text" id="hotel-name" name="hotel_name" placeholder="Write name of your Hotel/Villa for pickup.">
+</div>
+
+
+<hr style="border: 1px solid #ccc; margin: 15px 0;">
+    <!-- Adult Quantity -->
+<label for="adult-quantity">Adult <span style="opacity: 0.6; font-size: 0.9em;">(select quantity)</span></label>
+<input type="number" id="adult-quantity" name="adult_quantity" min="1" max="15" value="1" required>
+
+
+    <!-- Children Quantity -->
+    <label for="children-quantity">Children <span style="opacity: 0.6; font-size: 0.9em;">(select quantity)</span></label>
+    <input type="number" id="children-quantity" name="children_quantity" min="0" max="10" value="0" required>
+
+    <!-- Infant Quantity -->
+    <label for="infant-quantity">Infant <span style="opacity: 0.6; font-size: 0.9em;">(select quantity)</span></label>
+    <input type="number" id="infant-quantity" name="infant_quantity" min="0" max="5" value="0" required>
+
+
+<hr style="border: 1px solid #ccc; margin: 20px 0;">  
+ <!-- Full Name -->
+    <label for="full-name">Full Name:</label>
+    <input type="text" id="full-name" name="full_name" placeholder="Write your name" required>
+
+  <!-- Whatsapp -->
+    <label for="whatsapp">Whatsapp:</label>
+    <input type="tel" id="whatsapp" name="whatsapp" placeholder="Please write with +country code" required>
+
+    <!-- Email -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Write your email address" required>
+
+    <!-- Tour Activity Date -->
+    <label for="tour-date">Tour Activity Date:</label>
+    <input type="date" id="tour-date" name="tour_date" required>
+
+ <hr style="border: 1px solid #ccc; margin: 15px 0;">
+    <!-- Remark/Special Note -->
+    <label for="remark">add a Special Note:</label>
+    <textarea id="remark" name="remark" placeholder="Write any special note (Vegetarian etc.) write No if you do not have any special needs" rows="4" required></textarea>
+
+    <input type="hidden" id="booking-id" name="booking_id">
+
+    <hr style="border: 1px solid #ccc; margin: 15px 0;">
+
+   <!-- Total Amount Display -->
+<p><strong>Total Amount: <span id="total-amount" style="color: red; font-weight: bold;">0 THB</span></strong></p>
+    <!-- Faded Note after Total Amount -->
+    <p class="note">Kindly Note: this price doesn't include National park (Nangyuan island) entry fee 250THB per adult, 120THB per child.</p>
+
+    <!-- Submit Button -->
+    <button type="submit">Book Now</button>
+  </form>
+</div>
+
+<!-- Success Page -->
+<div id="success-page" class="form-container" style="display: none;">
+  <div class="logo">
+    <img src="https://kohtaosangthongtours.wordpress.com/wp-content/uploads/2024/11/cropped-sangthong-blue-logo-1.png" alt="Logo" width="300">
+  </div>
+  <h2 style="color: green;">Booking Successful</h2>
+  <div id="booking-summary"></div>
+  <button id="book-again">Book Again</button>
+</div>
+
+<!-- Image after Logo -->
+<div class="tour-image">
+  <img src="https://kohtaosangthongtours.wordpress.com/wp-content/uploads/2024/11/full-day-550-1.jpg" alt="Tour Image" width="100%">
+</div>
